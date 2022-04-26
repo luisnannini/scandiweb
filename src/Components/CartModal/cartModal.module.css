@@ -84,7 +84,7 @@
   height: 43px;
   color: black;
   background-color: white;
-  border: solid 1px;
+  border: solid 1px black;
   font-family: Raleway;
   font-size: 14px;
   font-weight: 600;
@@ -94,7 +94,6 @@
   text-decoration: none;
 }
 .checkOutBtn {
-  all: unset;
   width: 140px;
   height: 43px;
   color: white;
@@ -104,5 +103,6 @@
   font-weight: 600;
   line-height: 17px;
   text-align: center;
+  border: none;
   cursor: pointer;
 }
