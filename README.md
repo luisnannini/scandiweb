@@ -19,6 +19,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
     npm install
 
+## Set Environment file
+
+    Create a .env file at root level and add: REACT_APP_API=http://localhost:4000/
+
 ## Run App
     npm start
 
