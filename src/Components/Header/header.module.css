@@ -1,0 +1,242 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  font-family: Raleway;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 1;
+}
+
+.routes {
+  flex-basis: 100%;
+  padding-top: 8.5px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  overflow:hidden;
+  overflow-x:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.routes::-webkit-scrollbar {
+  width: 0px;
+}
+
+.tab {
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.activeTab {
+  color: #5ECE7B;
+  border-bottom: solid #5ECE7B;
+}
+.routes > .tab:hover {
+  color: #5ECE7B;
+  border-bottom: solid #5ECE7B;
+}
+
+.icon {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 5px;
+  margin: 0px 10px;
+  color: black;
+  width: 31px;
+}
+
+.rightButtons {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  margin-left: 15px;
+}
+
+.rightButtons > * {
+  align-items: center;
+  padding: 0 5px;
+  margin-right: 25px;
+}
+
+.currencyBtn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.currencyBtn > * {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.currenciesDropdown {
+  display: none;
+  position: absolute;
+  width: 114px;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.currenciesDropdownShow {
+  display: flex;
+}
+
+.currencyOption {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 0px;
+}
+.currencyOption span {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.currencyOption:hover {
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+.cartAndModal {
+  position: relative;
+}
+.btnAndNotification {
+  position: relative;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  align-items: center;
+}
+.notification {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 60px;
+}
+.cartModal {
+  display: flex;
+  position: absolute;
+  height: 500px;
+  width: 325px;
+  top: 45px;
+  right: 0;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.cartModalShow {
+  display: flex;
+}
+.cartModalTitle {
+  text-align: left;
+  align-self: flex-start;
+}
+.cartModalTitleBold {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cartModalItems {
+  width: 100%;
+  height: 420px;
+  overflow:hidden;
+  overflow-y:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cartModalItems::-webkit-scrollbar {
+  width: 0px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+.totalWord {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.totalNum {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.cartModalButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 0;
+}
+.viewCartBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 43px;
+  color: black;
+  background-color: white;
+  border: solid 1px;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.checkOutBtn {
+  all: unset;
+  width: 140px;
+  height: 43px;
+  color: white;
+  background-color: #5ECE7B;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  text-align: center;
+  cursor: pointer;
+}

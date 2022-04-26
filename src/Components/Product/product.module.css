@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.galleryDiv {
+  height: 513px;
+  display: flex;
+}
+
+.imagesLeft {
+  display: flex;
+  flex-direction: column;
+  overflow:hidden;
+  overflow-y:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.imagesLeft::-webkit-scrollbar {
+  width: 0px;
+}
+
+.img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 15px 5px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.imgBorder {
+  outline: solid 2px #5ECE7B;
+}
+
+.bigImage {
+  display: block;
+  width: 610px;
+  height: 510px;
+  object-fit: contain;
+}
+/* ///////////////////  InfoDiv */
+.infoDiv {
+  height: 513px;
+  min-width: 292px;
+  margin: 0 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  overflow:hidden;
+  overflow-y:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.infoDiv::-webkit-scrollbar {
+  width: 0px;
+}
+
+.title {
+  font-size: 30px;
+}
+.title span {
+  font-weight: 600;
+}
+.title > * {
+  margin: 15px 0;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: column;
+}
+.attribute {
+  display: flex;
+  flex-direction: column;
+}
+.attributeName {
+  text-transform: uppercase;
+  font-size: 18;
+  font-weight: 700;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+
+.attributeItems {
+  display: flex;
+}
+.attributeItem {
+  display: flex;
+  border: solid black 1px;
+  min-width: 50px;
+  min-height: 30px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.colorSelected {
+  outline: ridge 3px #5ECE7B;
+}
+.itemSelected {
+  color: white;
+  background-color: black;
+  outline: ridge 3px #5ECE7B;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 700;
+}
+.priceTitle {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+.priceNumber {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.addButton {
+  border: none;
+  color: white;
+  background-color: #5ECE7B;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 0;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.outOfStockBtn {
+  border: none;
+  color: white;
+  background-color: gray;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 0;
+  margin: 15px 0;
+}
+
+.description {
+  font-size: 16px;
+  width: 292px;
+  margin: 15px 0;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+.description:hover {
+  overflow: visible;
+  white-space: normal;
+}

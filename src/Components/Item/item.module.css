@@ -1,0 +1,161 @@
+.cartModalItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 190px;
+  padding: 5px 0;
+  margin: 5px 0;
+  border-top: 1px solid gray;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  overflow:hidden;
+  overflow-y:scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.itemInfo::-webkit-scrollbar {
+  width: 0px;
+}
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}
+.name {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Raleway;
+  font-style: Light;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.brand {
+  font-weight: 600;
+}
+.price {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.attributes {
+  display: flex;
+  flex-direction: column;
+}
+.attribute {
+  display: flex;
+  flex-direction: column;
+}
+.attributeName {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+.attributeItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+.attributeItem {
+  display: flex;
+  border: solid black 1px;
+  font-size: 14;
+  min-width: 24px;
+  height: 24px;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.attributeColor {
+  display: flex;
+  border: solid black 1px;
+  font-size: 14;
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.colorSelected {
+  outline: ridge 3px #5ECE7B;
+}
+.itemSelected {
+  color: white;
+  background-color: black;
+  outline: ridge 3px #5ECE7B;
+}
+.qtyAndImg {
+  display: flex;
+  justify-content: flex-end;
+}
+.qty {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.qty button {
+  all: unset;
+  display: flex;
+  border: solid black 1px;
+  font-size: 14;
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.qty p {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 500;
+}
+.imgAndArrows {
+  position: relative;
+}
+.img {
+  height: 190px;
+  width: 121px;
+  margin-left: 4px;
+  object-fit: contain;
+}
+.arrows {
+  position: absolute;
+  right: 10px;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.arrows button {
+  all: unset;
+  display: flex;
+  border: solid black 1px;
+  font-size: 14;
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.73);
+}
