@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { store, persistore } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import './reset.css';
 import './index.css';
 
@@ -16,7 +17,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <Provider store={store}>
-        <Routes />
+        <PersistGate persistor={persistore}>
+          <Routes />
+        </PersistGate>
       </Provider>
     </ApolloProvider>
   </React.StrictMode>,
