@@ -21,10 +21,13 @@ function Header(props) {
   const dispatch = useDispatch();
   const [currencyDropdownVisible, setCurrencyDropdownVisible] = useState(false);
   const [cartModalVisible, setCartModalVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
   const ref1 = useRef();
   const ref2 = useRef();
+  const ref3 = useRef();
   useOnClickOutside(ref1, () => setCurrencyDropdownVisible(false));
   useOnClickOutside(ref2, () => setCartModalVisible(false));
+  useOnClickOutside(ref3, () => setMenuVisible(false));
   const currentRoute = useLocation().pathname;
   const storeCurrencySymbol = useSelector((store) => store.currency);
   const storeCart = useSelector((store) => store.cart);
@@ -35,24 +38,30 @@ function Header(props) {
   if (currency.error) return <pre>{currency.error.message}</pre>;
   return (
     <nav className={styles.navbar}>
-      <div className={styles.routes}>
-        {props.routes.map((route) => (
-          <Link
-            className={
-              currentRoute.includes(route.path) ? `${styles.tab} ${styles.activeTab}` : styles.tab
-            }
-            to={route.path}
-            key={route.name}
-          >
-            {route.name}
-          </Link>
-        ))}
-      </div>
-      <a href="all">
-        <div className={styles.icon}>
-          <img src={`${process.env.PUBLIC_URL}/favicon.svg`} />
+      <div ref={ref3}>
+        <img
+          onClick={() => setMenuVisible(!menuVisible)}
+          className={styles.hamburger}
+          src={`${process.env.PUBLIC_URL}/hamburger-icon.png`}
+        />
+        <div className={!menuVisible ? styles.routes : styles.routesMobile}>
+          {props.routes.map((route) => (
+            <Link
+              onClick={() => setMenuVisible(false)}
+              className={
+                currentRoute.includes(route.path) ? `${styles.tab} ${styles.activeTab}` : styles.tab
+              }
+              to={route.path}
+              key={route.name}
+            >
+              {route.name}
+            </Link>
+          ))}
         </div>
-      </a>
+      </div>
+      <Link className={styles.icon} to="/">
+        <img src={`${process.env.PUBLIC_URL}/favicon.svg`} />
+      </Link>
       <div className={styles.rightButtons}>
         <div ref={ref1}>
           <button

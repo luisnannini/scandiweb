@@ -1,13 +1,9 @@
 .container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
   flex-wrap: wrap;
-}
-
-.galleryDiv {
-  height: 513px;
-  display: flex;
 }
 
 .imagesLeft {
@@ -20,6 +16,10 @@
 }
 .imagesLeft::-webkit-scrollbar {
   width: 0px;
+}
+@media (max-width: 740px) {
+  .imagesLeft {
+    flex-direction: row;}
 }
 
 .img {

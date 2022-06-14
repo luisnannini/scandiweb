@@ -83,19 +83,17 @@ function Product() {
 
   return (
     <section className={styles.container}>
-      <div className={styles.galleryDiv}>
-        <div className={styles.imagesLeft}>
-          {data.product.gallery.map((img) => (
-            <img
-              className={bigImgShowing === img ? `${styles.img} ${styles.imgBorder}` : styles.img}
-              key={img}
-              src={img}
-              onMouseOver={() => setBigImgShowing(img)}
-            ></img>
-          ))}
-        </div>
-        <img className={styles.bigImage} src={bigImgShowing}></img>
+      <div className={styles.imagesLeft}>
+        {data.product.gallery.map((img) => (
+          <img
+            className={bigImgShowing === img ? `${styles.img} ${styles.imgBorder}` : styles.img}
+            key={img}
+            src={img}
+            onMouseOver={() => setBigImgShowing(img)}
+          ></img>
+        ))}
       </div>
+      <img className={styles.bigImage} src={bigImgShowing}></img>
       <div className={styles.infoDiv}>
         <div className={styles.title}>
           <span>{data.product.brand}</span>
